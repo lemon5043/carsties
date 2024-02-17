@@ -1,10 +1,9 @@
-using AuctionService.Models;
+using MongoDB.Entities;
 
-namespace AuctionService.DTOs
+namespace SearchService.Models
 {
-    public class AuctionDto
+    public class Item : Entity
     {
-        public Guid Id { get; set; }
         public int ReservePrice { get; set; }
         public string Seller { get; set; }
         public string Winner { get; set; }
@@ -13,11 +12,7 @@ namespace AuctionService.DTOs
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public DateTime AuctionEnd { get; set; }
-
-        //取自 Status enum
         public string Status { get; set; }
-
-        //以下是取自 Item class
         public string Make { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
